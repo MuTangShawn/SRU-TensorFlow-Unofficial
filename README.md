@@ -38,5 +38,5 @@ $$h_t = r_t \circ c_t + (1 - r_t) \circ x_t$$
 ```  
   
 ## A little advertisement:
-This code is part for the model compared in my article. If this code can provide assistance for your research or development work, you can cite my article in publications if convenient.
+This code is part for the model compared in my article. If this code can provide assistance for your research or development work, you can cite my article in publications if convenient.  
 Yao, S., Jing, C., He, X., He, Y., & Zhang, L. (2024). A TDFC-RNNs framework integrated temporal convolutional attention mechanism for InSAR surface deformation prediction: A case study in Beijing Plain. International Journal of Applied Earth Observation and Geoinformation, 134, 104199.
