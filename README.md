@@ -19,19 +19,19 @@ $$h_t = r_t \circ c_t + (1 - r_t) \circ x_t$$
 ```python
 >>> import numpy as np
 >>> import tensorflow as tf
->>> import SRU_Layer_tf291
+>>> import SRU_Layer_tf2101
 >>> inputs = np.random.random((32, 10, 8))
->>> sru = SRU_Layer_tf291.SRU(4, return_sequences=True, return_state=True)
+>>> sru = SRU_Layer_tf2101.SRU(4, return_sequences=True, return_state=True)
 >>> output = sru(inputs)
 >>> output.shape
 (32, 4)
->>> sru = SRU_Layer_tf291.SRU(4, return_sequences=True, return_state=True)
+>>> sru = SRU_Layer_tf2101.SRU(4, return_sequences=True, return_state=True)
 >>> whole_sequence_output, final_state = sru(inputs)
 >>> whole_sequence_output.shape
 (32, 10, 4)
 >>> final_state.shape
 (32, 4)
->>> bisru = tf.keras.layers.Bidirectional(SRU_Layer_tf291.SRU(4, return_sequences=True), merge_mode="concat")
+>>> bisru = tf.keras.layers.Bidirectional(SRU_Layer_tf2101.SRU(4, return_sequences=True), merge_mode="concat")
 >>> output = bisru(inputs)
 >>> output.shape
 (32, 10, 8)
