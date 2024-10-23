@@ -1,5 +1,5 @@
 # SRU-TensorFlow-Unofficial
-Unofficial Implementation of the Simple Recurrent Units (SRU) v5-type in TensorFlow/Keras 2.10.1 Version.  
+Unofficial Implementation of the Simple Recurrent Units (SRU) v5-type in TensorFlow/Keras 2.10 Version.  
   
 This code was written based on the official implementation of RNN layers such as ***LSTM*** and ***GRU*** in TensorFlow, but did not implement the related acceleration function of ***CuDNN*** library.  
   
