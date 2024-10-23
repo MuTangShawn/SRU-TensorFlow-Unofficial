@@ -14,7 +14,7 @@ $$h_t = r_t \circ c_t + (1 - r_t) \circ x_t$$
   
 ## Note
 1. The calculation expression in the original SRUv5 only includes recurrent activation, the Sigmoid function (***σ***). But in SRU v4-type, the last formula was expressed as $$h_t = r_t \circ g(c_t) + (1 - r_t) \circ x_t$$. We have retained the ***activation*** function here which defaults to '***tanh***', but we have added a new parameter for this layer called '***use_activation***' which defaults to '***False***'.
-2. By observing the last formula, it can be found that the feature dimensions of the input and output of SRU must be equal. Therefore, we added a judgment in the model to determine whether the input and output feature dimensions are equal. When the output dimension is set to be unequal to the input dimension, the last formula will become $$h_t = r_t \circ c_t + (1 - r_t) \circ (W_h \cdot x_t)$$ to ensure that the model can run smoothly and facilitate support for multi-layer bidirectional (Bi-) SRU.
+2. By observing the last formula, it can be found that the feature dimensions of the input and output of SRU must be equal. Therefore, we added a judgment in the model to determine whether the input and output feature dimensions are equal. When the output dimension is set to be unequal to the input dimension, the last formula will become $$h_t = r_t \circ c_t + (1 - r_t) \circ (W_h \cdot x_t)$$ to ensure that the model can run smoothly and facilitate support for multi-layer bidirectional (Bi-) SRU. The implementation of QRNN here can be wrapped using the 'tf.keras.layers.Bidirectional' API. Please refer to the usage examples for details.
 
 ## Using example:  
 ```python
